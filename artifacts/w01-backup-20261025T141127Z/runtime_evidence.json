@@ -1,0 +1,81 @@
+{
+  "contract_version": "w01-0.2.0",
+  "product_version": "0.2.0-w1",
+  "implementation": "official",
+  "model_mode": "live",
+  "cases": [
+    {
+      "case_id": "clarification",
+      "passed": true,
+      "evidence": "artifacts/w01/evidence/clarification.json"
+    },
+    {
+      "case_id": "refund_explanation",
+      "passed": true,
+      "evidence": "artifacts/w01/evidence/refund_explanation.json"
+    },
+    {
+      "case_id": "analysis",
+      "passed": true,
+      "evidence": "artifacts/w01/evidence/analysis.json"
+    },
+    {
+      "case_id": "missing_coverage",
+      "passed": true,
+      "evidence": "artifacts/w01/evidence/missing_coverage.json"
+    },
+    {
+      "case_id": "readonly",
+      "passed": true,
+      "evidence": "artifacts/w01/evidence/readonly.json"
+    },
+    {
+      "case_id": "http_action",
+      "passed": true,
+      "evidence": "artifacts/w01/evidence/http_action.json"
+    },
+    {
+      "case_id": "idempotency",
+      "passed": true,
+      "evidence": "artifacts/w01/evidence/idempotency.json"
+    },
+    {
+      "case_id": "undo",
+      "passed": true,
+      "evidence": "artifacts/w01/evidence/undo.json"
+    },
+    {
+      "case_id": "date_text",
+      "passed": true,
+      "evidence": "artifacts/w01/evidence/date_text.json"
+    },
+    {
+      "case_id": "date_button",
+      "passed": true,
+      "evidence": "artifacts/w01/evidence/date_button.json"
+    },
+    {
+      "case_id": "reject_change",
+      "passed": true,
+      "evidence": "artifacts/w01/evidence/reject_change.json"
+    }
+  ],
+  "artifact_hashes": {
+    "artifacts/w01/evidence/clarification.json": "fb20a5db8e2c812058db48c47369f6acb085a8f8670d9f6a33e06da0ab7219cc",
+    "artifacts/w01/evidence/refund_explanation.json": "54fbcf008b5def547102539e4997cfec5ab62c2cfa4d10c95838afb9a249b840",
+    "artifacts/w01/evidence/analysis.json": "54fbcf008b5def547102539e4997cfec5ab62c2cfa4d10c95838afb9a249b840",
+    "artifacts/w01/evidence/missing_coverage.json": "6cf7e4dec14284d2bc01fbc7b067245bc64a28832a99974a215aa5bc310e689f",
+    "artifacts/w01/evidence/readonly.json": "d49ddaf4b8eab087480f0ed5bc205c32b2b85b9927869a691f6997c20111be15",
+    "artifacts/w01/evidence/http_action.json": "a594fa0b4b1f57024c32dd13e4b1fd4470a0b2728caadc8e242deb04581670b0",
+    "artifacts/w01/evidence/idempotency.json": "5039f529ed7d44161568c34cf351ea4885377ba9a947f2dc2b0d2792d1aa449d",
+    "artifacts/w01/evidence/undo.json": "366963f159b0d6b4c06957de6308952463a9deae190f5ff3fba9cc29c26c5925",
+    "artifacts/w01/evidence/date_text.json": "059b63d2db521fc940e66f83a51717cd63d997d449cd246c867c2790bd450d5a",
+    "artifacts/w01/evidence/date_button.json": "ab1b90bfbcd5d0b9e24236a725a92234e1a17a09801fd872abdc67ae55eccc78",
+    "artifacts/w01/evidence/reject_change.json": "24b20a1fbf3be8b0b44a59bd5e15c4facb9e554c4669a83457e1e2ed538ab54f",
+    "artifacts/w01/evidence/trace.jsonl": "bac1518d2c870f90246021b5c8e7d7bfa72fe6971e7fc27eef3f77acc9da9a0f"
+  },
+  "limits": [
+    "Synthetic sample only; Windows and target-learner trial not covered.",
+    "Model performance must be rechecked for each student model."
+  ]
+}

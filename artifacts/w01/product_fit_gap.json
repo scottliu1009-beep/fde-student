@@ -1,0 +1,180 @@
+{
+  "contract_version": "w01-0.2.1",
+  "product_version": "0.2.0-w1",
+  "capability_matrix_version": "w1-capabilities-0.2.0",
+  "items": [
+    {
+      "id": "GAP-001",
+      "request": "针对复购率连续四个季度整体下滑，给出能落地的场景，说明先从哪类会员、哪个环节动手，方向对着复购止跌回升；不把外部行业案例直接套用。",
+      "category": "待判断",
+      "capability_ids": [
+        "CAP-003",
+        "CAP-006"
+      ],
+      "evidence_status": "reported",
+      "evidence": [
+        {
+          "source": "artifacts/w01/W1-interview-29d90d49-3dc9-514f-b930-d207758715b2-transcript.json",
+          "locator": "MSG-04065",
+          "note": "沈总称目前看到的是整体复购率连续四个季度下滑；拆到哪些群体、品类或门店，他不能确认。此条只支持“整体下滑”为角色转述，不支持结构性原因已核实。"
+        },
+        {
+          "source": "artifacts/w01/W1-interview-29d90d49-3dc9-514f-b930-d207758715b2-transcript.json",
+          "locator": "MSG-04075",
+          "note": "他没有可对照的行业案例，也不接受把别人的场景直接套过来。他要求针对复购率连续四季度下滑给出能落地的场景，例如哪类会员、哪个环节先动手；方向是止跌回升。提升幅度和验收口径尚未确认。"
+        },
+        {
+          "source": "artifacts/w01/W1-interview-29d90d49-3dc9-514f-b930-d207758715b2-transcript.json",
+          "locator": "MSG-04077",
+          "note": "他同意先与小林、老周、陈姐把数据和口径对清，再给更精确的评估；评估仍要回答复购能否止跌回升，并同时说明提升幅度和验收口径。"
+        },
+        {
+          "source": "product/capabilities.json",
+          "locator": "CAP-003",
+          "note": "已实现工具是 describe_business、compare_spending、member_history 及受控标签工具，没有复购率计算。只能说明邻近能力存在，不能把客户诉求标成产品已有。"
+        },
+        {
+          "source": "product/capabilities.json",
+          "locator": "CAP-006",
+          "note": "标准语义是净消费、老会员和下降；青禾语义与数据适配由后续开发，不自动支持任意指标。复购率口径未核前，适配分类保持待判断。"
+        },
+        {
+          "source": "product/semantics.json",
+          "locator": "decline",
+          "note": "样例下降定义是基期大于零且下降至少20%，零基期比例未定义。这是净消费下降，不是复购率。"
+        }
+      ],
+      "next_step": "先与小林、老周、陈姐对齐复购率定义、80万活跃会员口径，以及可先动的会员类型和环节，再给沈总评估，并写清提升幅度与验收口径。松果样例只能比较老会员净消费、找出下降至少20%的人群并给出需人工确认的召回建议，不能当成青禾复购率已可落地。"
+    },
+    {
+      "id": "GAP-002",
+      "request": "确认复购率下滑是整体下滑，还是能拆到特定会员群体、品类或门店；并核实“主要是会员老化”是否有数据和口径支持。",
+      "category": "待判断",
+      "capability_ids": [
+        "CAP-004",
+        "CAP-006"
+      ],
+      "evidence_status": "unknown",
+      "evidence": [
+        {
+          "source": "artifacts/w01/W1-interview-29d90d49-3dc9-514f-b930-d207758715b2-transcript.json",
+          "locator": "MSG-04067",
+          "note": "沈总说明会员老化只是个人判断，依据还谈不上。当前按80万活跃会员看整体复购率连续四季度下滑，但群体、品类、门店以及具体口径他都不能确认。"
+        },
+        {
+          "source": "artifacts/w01/W1-interview-29d90d49-3dc9-514f-b930-d207758715b2-transcript.json",
+          "locator": "MSG-04069",
+          "note": "系统问题找 IT 负责人老周，运营找小林，门店找陈姐。他要求把口径和数据对一下，本场给不出拆分结果。"
+        },
+        {
+          "source": "product/semantics.json",
+          "locator": "objects",
+          "note": "样例对象只有 Member、Order、Store、Tag，没有品类。即使门店比较在样例中存在，也不能代表青禾的群体、品类或门店结构。"
+        },
+        {
+          "source": "product/capabilities.json",
+          "locator": "CAP-004",
+          "note": "样例库可重复导入虚构会员、订单和门店，比较净消费并区分零与未知。覆盖的是教学样例，不是80万活跃会员，也不能验证会员老化。"
+        }
+      ],
+      "next_step": "请小林核群体、品类拆分和复购口径，请陈姐核门店拆分，请老周核字段与覆盖范围。会员老化要先定义成可检验口径；沈总已说明目前没有依据，核实前不写成原因。样例有会员和门店、没有品类，也不能代表青禾结构。"
+    },
+    {
+      "id": "GAP-003",
+      "request": "在当前按80万活跃会员观察的口径下，确认真正贡献利润的占比，以及是否已有用户画像，用于判断先动哪类会员。",
+      "category": "待判断",
+      "capability_ids": [
+        "CAP-006"
+      ],
+      "evidence_status": "unknown",
+      "evidence": [
+        {
+          "source": "artifacts/w01/W1-interview-29d90d49-3dc9-514f-b930-d207758715b2-transcript.json",
+          "locator": "MSG-04067",
+          "note": "80万活跃会员是沈总当前观察复购的口径，不是已核实的利润贡献基数或画像范围。"
+        },
+        {
+          "source": "artifacts/w01/W1-interview-29d90d49-3dc9-514f-b930-d207758715b2-transcript.json",
+          "locator": "MSG-04071",
+          "note": "利润贡献占比和用户画像他给不了准数，要求运营小林和 IT 老周核实；数据能否支持他的判断，他也不能确认。"
+        },
+        {
+          "source": "product/capabilities.json",
+          "locator": "CAP-006",
+          "note": "标准产品不自动支持利润贡献、用户画像等任意指标。青禾语义未适配前，不能从样例净消费推算该占比。"
+        }
+      ],
+      "next_step": "请小林确认利润贡献的定义、占比和现成画像，请老周确认利润与会员属性是否可取。未核实前不据此圈定首批人群。标准语义不含利润贡献和用户画像。"
+    },
+    {
+      "id": "GAP-004",
+      "request": "三个月内见到效果，以便向董事会交代。",
+      "category": "待判断",
+      "capability_ids": [
+        "CAP-006"
+      ],
+      "evidence_status": "reported",
+      "evidence": [
+        {
+          "source": "artifacts/w01/W1-interview-29d90d49-3dc9-514f-b930-d207758715b2-transcript.json",
+          "locator": "MSG-04073",
+          "note": "三个月见效是沈总个人期望，董事会需要有个交代。董事会最认的指标、评估口径、提升幅度和验收标准，他本场给不了准数。"
+        },
+        {
+          "source": "product/semantics.json",
+          "locator": "recommendation_constraints",
+          "note": "建议只供运营人员审核，不承诺召回效果，也不声称已经发券。三个月业务见效不能由现有产品直接推出。"
+        }
+      ],
+      "next_step": "沈总说明三个月是个人期望，提升幅度和验收标准都未确认。先核实该期望会不会进入项目范围；核实前不写成承诺。现有产品不承诺召回效果，也不能代替董事会交代。"
+    },
+    {
+      "id": "GAP-005",
+      "request": "明确董事会最认的指标、评估口径、具体提升幅度和验收标准，并在后续评估中一并说明。",
+      "category": "待判断",
+      "capability_ids": [
+        "CAP-005",
+        "CAP-006"
+      ],
+      "evidence_status": "unknown",
+      "evidence": [
+        {
+          "source": "artifacts/w01/W1-interview-29d90d49-3dc9-514f-b930-d207758715b2-transcript.json",
+          "locator": "MSG-04063",
+          "note": "沈总开场要求说明准备了解什么，以及怎样判断产品能帮到他们。本场没有落到可执行的判定指标。"
+        },
+        {
+          "source": "artifacts/w01/W1-interview-29d90d49-3dc9-514f-b930-d207758715b2-transcript.json",
+          "locator": "MSG-04073",
+          "note": "董事会最认哪个指标、用什么口径评估，沈总明确给不了准数；具体提升幅度和验收标准都还没确认。"
+        },
+        {
+          "source": "artifacts/w01/W1-interview-29d90d49-3dc9-514f-b930-d207758715b2-transcript.json",
+          "locator": "MSG-04077",
+          "note": "他要求后续评估把尚未确定的提升幅度和验收口径一并说清楚，而不是先假定一个验收标准。"
+        },
+        {
+          "source": "product/capabilities.json",
+          "locator": "CAP-005",
+          "note": "基础评估覆盖 Promptfoo 标准样例和本地 trace，保存版本、结果、步数和用量。它不衡量董事会指标，不能当作验收依据。"
+        }
+      ],
+      "next_step": "沈总本场给不出这些准数。与小林、老周核对现有指标和数据后，再与沈总确认用哪项指标向董事会交代、幅度和范围如何判定。基础评估只覆盖标准样例，不能充当董事会验收。"
+    },
+    {
+      "id": "GAP-006",
+      "request": "核实上一智能营销项目未交付好的可确认问题，包括技术故障、延期、使用情况和实际效果。",
+      "category": "待判断",
+      "capability_ids": [],
+      "evidence_status": "unknown",
+      "evidence": [
+        {
+          "source": "artifacts/w01/W1-interview-29d90d49-3dc9-514f-b930-d207758715b2-transcript.json",
+          "locator": "MSG-04079",
+          "note": "沈总对上一智能营销项目的看法是供应商没有交付好；技术故障、延期、使用情况和实际效果，他给不出可确认细节。本次他更关心复购下滑能否落地。"
+        }
+      ],
+      "next_step": "沈总给出的是个人看法：供应商没有交付好，但说不出可确认细节。请小林、老周、陈姐分别核对上次项目的范围、故障、延期、使用和效果。没有可核对事实前，不把该看法写成产品能力限制。"
+    }
+  ]
+}
