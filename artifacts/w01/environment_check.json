@@ -42,8 +42,8 @@
       "code": "REAL_HTTP"
     },
     "evaluation": {
-      "status": "skipped",
-      "code": "RUN_PROMPTFOO_SEPARATELY"
+      "status": "pass",
+      "code": "PROMPTFOO_REPORT_VERIFIED"
     }
   }
 }
